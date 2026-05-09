@@ -262,99 +262,93 @@ export default function AboutSection() {
           </motion.article>
 
           {/* Skills Section */}
-          <motion.article
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.35 }}
-            transition={{ duration: 0.45, delay: 0.2 }}
-            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/60"
+<article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/60">
+  <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+    My Skills
+  </h3>
+
+  <div className="mt-2 h-1 w-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500" />
+
+  <div className="mt-10 space-y-12">
+    {/* Frontend */}
+    <div>
+      <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
+        Frontend
+      </h4>
+
+      <div className="mt-2 h-1 w-12 rounded-full bg-gradient-to-r from-cyan-500 to-pink-500" />
+
+      <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
+        {frontendSkills.map((skill) => (
+          <motion.div
+            key={skill.name}
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.2 }}
+            className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:shadow-lg dark:border-slate-700 dark:bg-slate-800/60"
           >
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-              My Skills
-            </h3>
+            <div className="text-5xl">{skill.icon}</div>
 
-            <div className="mt-2 h-1 w-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500" />
+            <p className="mt-5 text-sm font-semibold text-slate-700 dark:text-slate-200">
+              {skill.name}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
 
-            <div className="mt-10 space-y-12">
-              {/* Frontend */}
-              <div>
-                <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
-                  Frontend
-                </h4>
+    {/* Backend */}
+    <div>
+      <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
+        Backend
+      </h4>
 
-                <div className="mt-2 h-1 w-12 rounded-full bg-gradient-to-r from-cyan-500 to-pink-500" />
+      <div className="mt-2 h-1 w-12 rounded-full bg-gradient-to-r from-cyan-500 to-pink-500" />
 
-                <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
-                  {frontendSkills.map((skill) => (
-                    <motion.div
-                      key={skill.name}
-                      whileHover={{ y: -5 }}
-                      transition={{ duration: 0.2 }}
-                      className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:shadow-lg dark:border-slate-700 dark:bg-slate-800/60"
-                    >
-                      <div className="text-5xl">{skill.icon}</div>
+      <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
+        {backendSkills.map((skill) => (
+          <motion.div
+            key={skill.name}
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.2 }}
+            className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:shadow-lg dark:border-slate-700 dark:bg-slate-800/60"
+          >
+            <div className="text-5xl">{skill.icon}</div>
 
-                      <p className="mt-5 text-sm font-semibold text-slate-700 dark:text-slate-200">
-                        {skill.name}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
+            <p className="mt-5 text-sm font-semibold text-slate-700 dark:text-slate-200">
+              {skill.name}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
 
-              {/* Backend */}
-              <div>
-                <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
-                  Backend
-                </h4>
+    {/* Tools */}
+    <div>
+      <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
+        Tools
+      </h4>
 
-                <div className="mt-2 h-1 w-12 rounded-full bg-gradient-to-r from-cyan-500 to-pink-500" />
+      <div className="mt-2 h-1 w-12 rounded-full bg-gradient-to-r from-cyan-500 to-pink-500" />
 
-                <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
-                  {backendSkills.map((skill) => (
-                    <motion.div
-                      key={skill.name}
-                      whileHover={{ y: -5 }}
-                      transition={{ duration: 0.2 }}
-                      className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:shadow-lg dark:border-slate-700 dark:bg-slate-800/60"
-                    >
-                      <div className="text-5xl">{skill.icon}</div>
+      <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
+        {toolsSkills.map((skill) => (
+          <motion.div
+            key={skill.name}
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.2 }}
+            className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:shadow-lg dark:border-slate-700 dark:bg-slate-800/60"
+          >
+            <div className="text-5xl">{skill.icon}</div>
 
-                      <p className="mt-5 text-sm font-semibold text-slate-700 dark:text-slate-200">
-                        {skill.name}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Tools */}
-              <div>
-                <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
-                  Tools
-                </h4>
-
-                <div className="mt-2 h-1 w-12 rounded-full bg-gradient-to-r from-cyan-500 to-pink-500" />
-
-                <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
-                  {toolsSkills.map((skill) => (
-                    <motion.div
-                      key={skill.name}
-                      whileHover={{ y: -5 }}
-                      transition={{ duration: 0.2 }}
-                      className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:shadow-lg dark:border-slate-700 dark:bg-slate-800/60"
-                    >
-                      <div className="text-5xl">{skill.icon}</div>
-
-                      <p className="mt-5 text-sm font-semibold text-slate-700 dark:text-slate-200">
-                        {skill.name}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.article>
+            <p className="mt-5 text-sm font-semibold text-slate-700 dark:text-slate-200">
+              {skill.name}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </div>
+</article>
         </div>
       </div>
     </section>

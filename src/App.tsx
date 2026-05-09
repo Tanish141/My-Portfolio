@@ -21,6 +21,8 @@ export default function App() {
     setIsDark(shouldUseDark);
   }, []);
 
+  // This is 
+
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark);
     localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");

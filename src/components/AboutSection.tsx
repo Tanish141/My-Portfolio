@@ -185,7 +185,7 @@ export default function AboutSection() {
 
             <div className="mt-8 overflow-hidden">
   <div
-    className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 scrollbar-hide"
+    className="flex snap-x snap-mandatory gap-6 overflow-x-scroll md:overflow-x-auto scroll-smooth pb-4 scrollbar-hide"
   >
     {Array.from({
       length: Math.ceil(certifications.length / 6),
@@ -198,7 +198,7 @@ export default function AboutSection() {
       return (
         <div
           key={pageIndex}
-          className="grid min-w-full snap-center gap-5 md:grid-cols-2"
+          className="grid w-full shrink-0 snap-center gap-5 md:grid-cols-2"
         >
           {items.map((cert, index) => (
             <motion.div

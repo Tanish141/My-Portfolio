@@ -52,6 +52,7 @@ export default function HeroSection() {
               href="/Tanish_S_Resume.pdf"
               target="_blank"
               rel="noreferrer"
+              download="Tanish_S_Resume.pdf"
               className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-cyan-500 hover:text-cyan-700 dark:border-slate-600 dark:text-slate-200 dark:hover:border-cyan-300 dark:hover:text-cyan-200"
             >
               Download Resume <FaDownload size={14} />
